@@ -7,6 +7,7 @@ $url = isset($_GET['url']) ? $_GET['url'] : null;
 function send_json($data)
 {
     header('Content-Type: application/json');
+    header("Access-Control-Allow-Origin: *");
     echo json_encode($data, JSON_PRETTY_PRINT);
     exit;
 }
